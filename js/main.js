@@ -32,6 +32,7 @@ const membriTeam = [
     }
 ]
 const boxInformationText = document.querySelector(".box_inormation_text");
+const boxInformationImg = document.querySelector(".box_inormation_img")
 
 
 for (let i in membriTeam ){
@@ -40,6 +41,12 @@ for (let i in membriTeam ){
     console.log(`membro numero ${parseInt(i)+1}:`)
     console.log(`nome - ${membriTeam[i].nome} \nruolo - ${membriTeam[i].posizione} \nimgURL - ${membriTeam[i].img} `)
 
+    // MILESTONE 2 Stampo stringhe su DOM
     const string = `<br/>membro numero ${parseInt(i)+1}: <br/>nome - ${membriTeam[i].nome} <br/>ruolo - ${membriTeam[i].posizione} <br/>imgURL - ${membriTeam[i].img}<br/>`;
     boxInformationText.innerHTML += string;
+
+    // BONUS 1 visualizazione immagini
+    const imgEl = document.createElement("img");
+    imgEl.src = `../imgs/${membriTeam[i].img}`;
+    boxInformationImg.innerHTML += imgEl.outerHTML;
 }
