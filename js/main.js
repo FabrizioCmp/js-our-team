@@ -1,0 +1,45 @@
+/********************** DICHIARAZIONE VARIABILI **********************/
+const membriTeam = [
+    /*0*/{
+        nome: "Wayne Barnett",
+        posizione: "Founder & CEO",
+        img: "wayne-barnett-founder-ceo.jpg",
+    },
+    /*1*/{
+        nome: "Angela Caroll",
+        posizione: "Chief Editor",
+        img: "angela-caroll-chief-editor.jpg",
+    },
+    /*2*/{
+        nome: "Walter Gordon",
+        posizione: "Office Manager",
+        img: "walter-gordon-office-manager.jpg",
+    },
+     /*3*/{
+        nome: "Angela Lopez",
+        posizione: "Social Media Manager",
+        img: "angela-lopez-social-media-manager.jpg",
+    },
+    /*4*/{
+        nome: "Scott Estrada",
+        posizione: "Developer",
+        img: "scott-estrada-developer.jpg",
+    },
+    /*5*/{
+        nome: "Barbara Ramos",
+        posizione: "Graphic Designer",
+        img: "barbara-ramos-graphic-designer.jpg",
+    }
+]
+const boxInformationText = document.querySelector(".box_inormation_text");
+
+
+for (let i in membriTeam ){
+
+    // MILESTONE 1 Stampo su console
+    console.log(`membro numero ${parseInt(i)+1}:`)
+    console.log(`nome - ${membriTeam[i].nome} \nruolo - ${membriTeam[i].posizione} \nimgURL - ${membriTeam[i].img} `)
+
+    const string = `<br/>membro numero ${parseInt(i)+1}: <br/>nome - ${membriTeam[i].nome} <br/>ruolo - ${membriTeam[i].posizione} <br/>imgURL - ${membriTeam[i].img}<br/>`;
+    boxInformationText.innerHTML += string;
+}
