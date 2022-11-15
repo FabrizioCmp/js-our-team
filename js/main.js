@@ -45,8 +45,16 @@ for (let i in membriTeam ){
     const string = `<br/>membro numero ${parseInt(i)+1}: <br/>nome - ${membriTeam[i].nome} <br/>ruolo - ${membriTeam[i].posizione} <br/>imgURL - ${membriTeam[i].img}<br/>`;
     boxInformationText.innerHTML += string;
 
-    // BONUS 1 visualizazione immagini
+    // BONUS 1 visualizazione immagini membri team
     const imgEl = document.createElement("img");
     imgEl.src = `../imgs/${membriTeam[i].img}`;
     boxInformationImg.innerHTML += imgEl.outerHTML;
+
+    //BONUS 2 creazione cards per ogni membro del team
+    const box_imgEl = document.querySelector(`.card_member${parseInt(i)+1} .box_img`); 
+    const cardEl = document.querySelector(`.card_member${parseInt(i)+1}`);
+    const imgCard = imgEl;
+    imgCard.classList.add("img-fluid");
+    box_imgEl.append(imgCard);
+    cardEl.innerHTML +=  `<br/><strong>${membriTeam[i].nome}</strong> <br/>${membriTeam[i].posizione} `;
 }
