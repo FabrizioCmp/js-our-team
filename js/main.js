@@ -47,7 +47,7 @@ for (let i in membriTeam ){
 
     // BONUS 1 visualizazione immagini membri team
     const imgEl = document.createElement("img");
-    imgEl.src = `../imgs/${membriTeam[i].img}`;
+    imgEl.src = `imgs/${membriTeam[i].img}`;
     boxInformationImg.innerHTML += imgEl.outerHTML;
 
     //BONUS 2 creazione cards per ogni membro del team
